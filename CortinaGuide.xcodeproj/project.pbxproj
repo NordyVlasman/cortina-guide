@@ -48,15 +48,13 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		88B02C99276BF39B00B8B6D3 /* Main */ = {
+		88B02C99276BF39B00B8B6D3 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				88E0BB6E276B732300AA7511 /* AppDelegate.swift */,
-				88E0BB70276B732300AA7511 /* SceneDelegate.swift */,
 				88E0BB74276B732300AA7511 /* Main.storyboard */,
 				88E0BB79276B732700AA7511 /* LaunchScreen.storyboard */,
 			);
-			path = Main;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		88E0BB62276B732300AA7511 = {
@@ -78,7 +76,9 @@
 		88E0BB6D276B732300AA7511 /* CortinaGuide */ = {
 			isa = PBXGroup;
 			children = (
-				88B02C99276BF39B00B8B6D3 /* Main */,
+				88E0BB6E276B732300AA7511 /* AppDelegate.swift */,
+				88E0BB70276B732300AA7511 /* SceneDelegate.swift */,
+				88B02C99276BF39B00B8B6D3 /* Storyboard */,
 				88B02C98276BF38B00B8B6D3 /* Assets */,
 				88E0BB85276B733E00AA7511 /* Controllers */,
 				88E0BB84276B733B00AA7511 /* Models */,
