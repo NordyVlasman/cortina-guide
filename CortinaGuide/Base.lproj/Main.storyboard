@@ -22,19 +22,11 @@
             </objects>
             <point key="canvasLocation" x="-916" y="571"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="ozb-St-bfN">
             <objects>
                 <viewController id="iKf-Xl-1nf" customClass="HomeViewController" customModule="CortinaGuide" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="view" contentMode="scaleToFill" id="Bal-Xt-QUi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <items>
-                            <navigationItem title="Title" id="LMh-1A-YAL"/>
-                        </items>
-                        <navigationBarAppearance key="standardAppearance"/>
-                    </navigationBar>
-                    <navigationItem key="navigationItem" id="n9o-Wb-chz"/>
+                    <navigationItem key="navigationItem" title="Home" id="n9o-Wb-chz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBh-MH-BDC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

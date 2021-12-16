@@ -10,9 +10,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack {
-            Text("Hello world")
-            Spacer()
-            Text("hello world")
+            Text("Home View SWIFTUI")
         }
     }
 }
