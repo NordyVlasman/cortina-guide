@@ -6,14 +6,27 @@
 //
 
 import UIKit
+import SwiftUI
 
-class ViewController: UIViewController {
-
+class ViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
 
 }
 
+
+class HomeViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let childView = UIHostingController(rootView: HomeView())
+        addChild(childView)
+        childView.view.frame = self.view.frame
+        view.addSubview(childView.view)
+        childView.didMove(toParent: self)
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+}
