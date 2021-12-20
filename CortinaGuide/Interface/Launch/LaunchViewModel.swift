@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+class LaunchViewModel {
+        
+    private weak var coordinator: AppCoordinatorDelegate?
+    
+    init(
+        coordinator: AppCoordinatorDelegate
+    ) {
+        self.coordinator = coordinator
+    }
+}
