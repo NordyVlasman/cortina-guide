@@ -15,7 +15,7 @@ protocol Coordinator: AnyObject {
     /// The navigation controller
     var navigationController: UINavigationController { get set }
     
-    // Deisgnated starter method
+    // Designated starter method
     func start()
 }
 
