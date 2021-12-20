@@ -41,6 +41,10 @@ class OnboardingManager: OnboardingManaging {
     @Keychain(name: "onboardingData", service: Constants.keychainService, clearOnReinstall: true)
     private var onboardingData: OnboardingData = .empty
     
+    required init() {
+        
+    }
+    
     var needsOnboarding: Bool {
         return onboardingData.needsOnboarding
     }

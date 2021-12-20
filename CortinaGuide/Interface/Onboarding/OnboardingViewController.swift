@@ -12,6 +12,8 @@ class OnboardingViewController: UIViewController {
     
     private let viewModel: OnboardingViewModel
     
+//    private let pageViewController =
+    
     
     init(viewModel: OnboardingViewModel) {
         self.viewModel = viewModel
