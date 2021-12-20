@@ -10,6 +10,8 @@ import SwiftUI
 
 extension UIViewController {
 
+    // MARK: - SwiftUI Helpers
+    
     /// Add a SwiftUI `View` as a child of the input `UIView`.
     /// - Parameters:
     ///   - swiftUIView: The SwiftUI `View` to add as a child.
@@ -36,5 +38,21 @@ extension UIViewController {
 
         /// Notify the hosting controller that it has been moved to the current view controller.
         hostingController.didMove(toParent: self)
+    }
+    
+    // MARK: - View styling
+    
+    /// Set up translucent navigation bar. By default, navigation bar has opaque background
+    func setupTranslucentNavigationBar() {
+        if #available(iOS 15.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithTransparentBackground()
+            navigationController?.navigationBar.standardAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        } else {
+            navigationController?.navigationBar.isTranslucent = true
+            navigationController?.navigationBar.backgroundColor = .clear
+            navigationController?.navigationBar.barTintColor = .clear
+        }
     }
 }

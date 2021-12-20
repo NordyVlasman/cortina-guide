@@ -7,9 +7,11 @@
 
 import Foundation
 
-protocol BaseCoordinatorDelegate {
+protocol BaseCoordinatorDelegate: AnyObject {
     
     func navigateToHome()
+    
+    func navigateToAugmentedReality()
     
 }
 
@@ -33,9 +35,14 @@ extension BaseCoordinator: BaseCoordinatorDelegate {
         if let existingStartViewController = dashboardNavigationController?.viewControllers.first(where: { $0 is HomeViewController }) {
             dashboardNavigationController?.popToViewController(existingStartViewController, animated: true)
         } else {
-            let dashboardViewController = HomeViewController()
+            let dashboardViewController = HomeViewController(viewModel: HomeViewModel(coordinator: self))
             
             dashboardNavigationController?.setViewControllers([dashboardViewController], animated: false)
         }
+    }
+    
+    func navigateToAugmentedReality() {
+        let viewController = ARViewController()
+        dashboardNavigationController?.pushViewController(viewController, animated: false)
     }
 }

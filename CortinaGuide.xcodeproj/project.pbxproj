@@ -20,6 +20,8 @@
 		8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850908C2770CBE90038B225 /* SharedCoordinator.swift */; };
 		885090902770CE350038B225 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850908F2770CE350038B225 /* HomeViewController.swift */; };
 		885090922770CF4E0038B225 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090912770CF4E0038B225 /* HomeView.swift */; };
+		885090942770D52B0038B225 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090932770D52B0038B225 /* HomeViewModel.swift */; };
+		885090972770D6500038B225 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090962770D6500038B225 /* ARViewController.swift */; };
 		88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB6E276B732300AA7511 /* AppDelegate.swift */; };
 		88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB70276B732300AA7511 /* SceneDelegate.swift */; };
 		88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E0BB77276B732700AA7511 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 		8850908C2770CBE90038B225 /* SharedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCoordinator.swift; sourceTree = "<group>"; };
 		8850908F2770CE350038B225 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		885090912770CF4E0038B225 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		885090932770D52B0038B225 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		885090962770D6500038B225 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		88E0BB6B276B732300AA7511 /* CortinaGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CortinaGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E0BB6E276B732300AA7511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E0BB70276B732300AA7511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		880FC02A277095EB00491371 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				885090952770D6470038B225 /* AR */,
 				8850908E2770CE2B0038B225 /* Home */,
 				8850907F2770C3220038B225 /* Common */,
 				880FC036277096D000491371 /* Coordinator */,
@@ -155,8 +160,17 @@
 			children = (
 				8850908F2770CE350038B225 /* HomeViewController.swift */,
 				885090912770CF4E0038B225 /* HomeView.swift */,
+				885090932770D52B0038B225 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		885090952770D6470038B225 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				885090962770D6500038B225 /* ARViewController.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 		88E0BB62276B732300AA7511 = {
@@ -258,6 +272,7 @@
 				880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */,
 				885090922770CF4E0038B225 /* HomeView.swift in Sources */,
 				885090812770C32C0038B225 /* NavigationController.swift in Sources */,
+				885090972770D6500038B225 /* ARViewController.swift in Sources */,
 				880FC0312770965500491371 /* LaunchView.swift in Sources */,
 				880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */,
 				885090882770C9770038B225 /* LaunchState.swift in Sources */,
@@ -268,6 +283,7 @@
 				8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */,
 				8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */,
 				885090902770CE350038B225 /* HomeViewController.swift in Sources */,
+				885090942770D52B0038B225 /* HomeViewModel.swift in Sources */,
 				880FC03E2770972800491371 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

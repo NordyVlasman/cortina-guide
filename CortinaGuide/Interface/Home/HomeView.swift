@@ -7,10 +7,21 @@
 
 import SwiftUI
 
+protocol HomeViewDelegate: AnyObject {
+    func navigateToAR()
+}
+
 struct HomeView: View {
+    
+    weak var delegate: HomeViewDelegate?
+    
     var body: some View {
         VStack {
-            Text("Home")
+            Button(action: {
+                delegate?.navigateToAR()
+            }, label: {
+                Text("Show IN AR")
+            })
         }
     }
 }

@@ -35,6 +35,6 @@ class LaunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addSubSwiftUIView(sceneView, to: self.view)
+        addSubSwiftUIView(sceneView, to: view)
     }
 }
