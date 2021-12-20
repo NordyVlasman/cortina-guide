@@ -9,7 +9,12 @@ import Foundation
 import UIKit
 
 protocol AppCoordinatorDelegate: AnyObject {
+    
+    func handleLaunchState(_ state: LaunchState)
+    
+    /// Retry loading the requirements
     func retry()
+    
     func reset()
 }
 
@@ -61,17 +66,46 @@ class AppCoordinator: Coordinator {
     private func startApplication() {
         guard !isApplicationStarted else { return }
         isApplicationStarted = true
+        
+        guard childCoordinators.isEmpty else {
+            if childCoordinators.first is BaseCoordinator {
+                childCoordinators.first?.start()
+            }
+            return
+        }
+        
+        let coordinator = BaseCoordinator(navigationController: navigationController, window: window)
+        startChildCoordinator(coordinator)
     }
     
 }
 
 // MARK: - AppCoordinatorDelegate
 extension AppCoordinator: AppCoordinatorDelegate {
+    
+    func handleLaunchState(_ state: LaunchState) {
+        
+        switch state {
+        case .noActionNeeded:
+            startApplication()
+        case .internetRequired:
+            print("internet is required")
+        }
+    }
+    
     func retry() {
         
+        if let presentedViewController = navigationController.presentedViewController {
+            presentedViewController.dismiss(animated: true) { [weak self] in
+                self?.startLauncher()
+            }
+        } else {
+            startLauncher()
+        }
     }
     
     func reset() {
+    
         isApplicationStarted = false
         childCoordinators = []
         retry()

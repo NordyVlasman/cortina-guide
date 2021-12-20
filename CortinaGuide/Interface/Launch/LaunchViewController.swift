@@ -36,6 +36,5 @@ class LaunchViewController: UIViewController {
         super.viewDidLoad()
         
         addSubSwiftUIView(sceneView, to: self.view)
-        
     }
 }

@@ -14,6 +14,12 @@
 		880FC03E2770972800491371 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC03D2770972800491371 /* Coordinator.swift */; };
 		885090812770C32C0038B225 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090802770C32C0038B225 /* NavigationController.swift */; };
 		885090842770C71F0038B225 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090832770C71F0038B225 /* UIViewController+Extensions.swift */; };
+		885090862770C8B10038B225 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885090852770C8B10038B225 /* Launch Screen.storyboard */; };
+		885090882770C9770038B225 /* LaunchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090872770C9770038B225 /* LaunchState.swift */; };
+		8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850908A2770CBE10038B225 /* BaseCoordinator.swift */; };
+		8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850908C2770CBE90038B225 /* SharedCoordinator.swift */; };
+		885090902770CE350038B225 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850908F2770CE350038B225 /* HomeViewController.swift */; };
+		885090922770CF4E0038B225 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090912770CF4E0038B225 /* HomeView.swift */; };
 		88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB6E276B732300AA7511 /* AppDelegate.swift */; };
 		88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB70276B732300AA7511 /* SceneDelegate.swift */; };
 		88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E0BB77276B732700AA7511 /* Assets.xcassets */; };
@@ -27,6 +33,12 @@
 		880FC03D2770972800491371 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		885090802770C32C0038B225 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		885090832770C71F0038B225 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		885090852770C8B10038B225 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		885090872770C9770038B225 /* LaunchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchState.swift; sourceTree = "<group>"; };
+		8850908A2770CBE10038B225 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		8850908C2770CBE90038B225 /* SharedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCoordinator.swift; sourceTree = "<group>"; };
+		8850908F2770CE350038B225 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		885090912770CF4E0038B225 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		88E0BB6B276B732300AA7511 /* CortinaGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CortinaGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E0BB6E276B732300AA7511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E0BB70276B732300AA7511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +68,7 @@
 		880FC02A277095EB00491371 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				8850908E2770CE2B0038B225 /* Home */,
 				8850907F2770C3220038B225 /* Common */,
 				880FC036277096D000491371 /* Coordinator */,
 				880FC02F2770964600491371 /* Launch */,
@@ -87,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				88E0BB77276B732700AA7511 /* Assets.xcassets */,
+				885090852770C8B10038B225 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -105,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				880FC03A277096EB00491371 /* AppCoordinator.swift */,
+				8850908A2770CBE10038B225 /* BaseCoordinator.swift */,
+				8850908C2770CBE90038B225 /* SharedCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -113,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				880FC03D2770972800491371 /* Coordinator.swift */,
+				885090872770C9770038B225 /* LaunchState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +148,15 @@
 				885090832770C71F0038B225 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8850908E2770CE2B0038B225 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8850908F2770CE350038B225 /* HomeViewController.swift */,
+				885090912770CF4E0038B225 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		88E0BB62276B732300AA7511 = {
@@ -217,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885090862770C8B10038B225 /* Launch Screen.storyboard in Resources */,
 				88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,13 +256,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */,
+				885090922770CF4E0038B225 /* HomeView.swift in Sources */,
 				885090812770C32C0038B225 /* NavigationController.swift in Sources */,
 				880FC0312770965500491371 /* LaunchView.swift in Sources */,
 				880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */,
+				885090882770C9770038B225 /* LaunchState.swift in Sources */,
 				885090842770C71F0038B225 /* UIViewController+Extensions.swift in Sources */,
 				88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */,
 				88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */,
 				880FC0352770966500491371 /* LaunchViewController.swift in Sources */,
+				8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */,
+				8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */,
+				885090902770CE350038B225 /* HomeViewController.swift in Sources */,
 				880FC03E2770972800491371 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

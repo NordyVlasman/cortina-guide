@@ -15,5 +15,13 @@ class LaunchViewModel {
         coordinator: AppCoordinatorDelegate
     ) {
         self.coordinator = coordinator
+        
+        handleState()
+    }
+    
+    private func handleState() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.coordinator?.handleLaunchState(.noActionNeeded)
+        }
     }
 }
