@@ -31,7 +31,6 @@ class KeychainItem<T: Codable> {
         query[kSecMatchLimit as String] = kSecMatchLimitOne
         query[kSecReturnAttributes as String] = kCFBooleanTrue
         query[kSecReturnData as String] = kCFBooleanFalse
-        query[kSecUseAuthenticationUI as String] = kSecUseAuthenticationUIFail
 
         var queryResult: AnyObject?
         let status = withUnsafeMutablePointer(to: &queryResult) {
@@ -206,11 +205,11 @@ class CachedKeychainItem<T: Codable>: KeychainItem<T> {
 
         if clearOnReinstall {
             let key = (name + (service ?? "")).sha256
-
-            if !Foundation.UserDefaults.standard.bool(forKey: key) {
+//TODO: - UNDO THIS LINE
+//            if !Foundation.UserDefaults.standard.bool(forKey: key) {
                 projectedValue.clearData()
-                Foundation.UserDefaults.standard.set(true, forKey: key)
-            }
+//                Foundation.UserDefaults.standard.set(true, forKey: key)
+//            }
         }
     }
 

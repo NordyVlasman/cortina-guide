@@ -15,6 +15,7 @@ class SharedCoordinator: Coordinator {
     
     var window: UIWindow
     
+    var onboardingManager: OnboardingManaging = Services.onboardingManager
     var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController
@@ -32,6 +33,41 @@ class SharedCoordinator: Coordinator {
     
 }
 
+// MARK: - Shared
+
+extension SharedCoordinator {
+    func handleOnboarding(factory: OnboardingFactoryProtocol, onCompletion: () -> Void) {
+        if onboardingManager.needsOnboarding {
+            let coordinator = OnboardingCoordinator(navigationController: navigationController, onboardingDelegate: self, factory: factory)
+            startChildCoordinator(coordinator)
+            return
+        } else if onboardingManager.needsConsent {
+            let coordinator = OnboardingCoordinator(navigationController: navigationController, onboardingDelegate: self, factory: factory)
+            startChildCoordinator(coordinator)
+            coordinator.navigateToConsent()
+            return
+        }
+        onCompletion()
+    }
+}
+
+// MARK: - OnboardingDelegate
+
+extension SharedCoordinator: OnboardingDelegate {
+    func finishOnboarding() {
+        onboardingManager.finishOnboarding()
+    }
+    
+    func consentGiven() {
+        onboardingManager.consentGiven()
+        
+        if let onboardingCoordinator = childCoordinators.first {
+            removeChildCoordinator(onboardingCoordinator)
+        }
+        
+        start()
+    }
+}
 
 // MARK: - Restartable
 
