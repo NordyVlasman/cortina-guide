@@ -26,7 +26,7 @@
 		8850909E2770E0200038B225 /* OnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850909D2770E0200038B225 /* OnboardingFactory.swift */; };
 		885090A02770E1B30038B225 /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8850909F2770E1B30038B225 /* OnboardingManager.swift */; };
 		885090A32770E3A60038B225 /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090A22770E3A60038B225 /* KeychainItem.swift */; };
-		885090A52770E3DF0038B225 /* String+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090A42770E3DF0038B225 /* String+Data.swift */; };
+		885090A52770E3DF0038B225 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090A42770E3DF0038B225 /* String+Extensions.swift */; };
 		885090A72770E5AD0038B225 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090A62770E5AD0038B225 /* OnboardingViewModel.swift */; };
 		885090A92770E61B0038B225 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090A82770E61B0038B225 /* Bindable.swift */; };
 		885090AB2770E75E0038B225 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090AA2770E75E0038B225 /* OnboardingViewController.swift */; };
@@ -35,6 +35,16 @@
 		885090B32770FDB40038B225 /* OnboardingConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090B22770FDB40038B225 /* OnboardingConsentViewController.swift */; };
 		885090B52770FE0D0038B225 /* OnboardingConsentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090B42770FE0D0038B225 /* OnboardingConsentViewModel.swift */; };
 		885090B82771003C0038B225 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090B72771003C0038B225 /* PageViewController.swift */; };
+		88BA0B3E2771CE600093544E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B3D2771CE600093544E /* OnboardingView.swift */; };
+		88BA0B402771CE770093544E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B3F2771CE770093544E /* BaseView.swift */; };
+		88BA0B422771D09A0093544E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B412771D09A0093544E /* Button.swift */; };
+		88BA0B442771D1E50093544E /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B432771D1E50093544E /* UIEdgeInsets+Extensions.swift */; };
+		88BA0B462771D40B0093544E /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B452771D40B0093544E /* Haptic.swift */; };
+		88BA0B482771D6430093544E /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B472771D6430093544E /* UIDevice+Extensions.swift */; };
+		88BA0B4A2771DA750093544E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B492771DA750093544E /* Services.swift */; };
+		88BA0B4C2771DE030093544E /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B4B2771DE030093544E /* UIBarButtonItem+Extensions.swift */; };
+		88BA0B4E2771E8BA0093544E /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B4D2771E8BA0093544E /* OnboardingPageView.swift */; };
+		88BA0B502771FB490093544E /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B4F2771FB480093544E /* ARViewModel.swift */; };
 		88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB6E276B732300AA7511 /* AppDelegate.swift */; };
 		88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB70276B732300AA7511 /* SceneDelegate.swift */; };
 		88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E0BB77276B732700AA7511 /* Assets.xcassets */; };
@@ -60,7 +70,7 @@
 		8850909D2770E0200038B225 /* OnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactory.swift; sourceTree = "<group>"; };
 		8850909F2770E1B30038B225 /* OnboardingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
 		885090A22770E3A60038B225 /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
-		885090A42770E3DF0038B225 /* String+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Data.swift"; sourceTree = "<group>"; };
+		885090A42770E3DF0038B225 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		885090A62770E5AD0038B225 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		885090A82770E61B0038B225 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		885090AA2770E75E0038B225 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +79,16 @@
 		885090B22770FDB40038B225 /* OnboardingConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConsentViewController.swift; sourceTree = "<group>"; };
 		885090B42770FE0D0038B225 /* OnboardingConsentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConsentViewModel.swift; sourceTree = "<group>"; };
 		885090B72771003C0038B225 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		88BA0B3D2771CE600093544E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		88BA0B3F2771CE770093544E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		88BA0B412771D09A0093544E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		88BA0B432771D1E50093544E /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		88BA0B452771D40B0093544E /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
+		88BA0B472771D6430093544E /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		88BA0B492771DA750093544E /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		88BA0B4B2771DE030093544E /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		88BA0B4D2771E8BA0093544E /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		88BA0B4F2771FB480093544E /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		88E0BB6B276B732300AA7511 /* CortinaGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CortinaGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E0BB6E276B732300AA7511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E0BB70276B732300AA7511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +193,8 @@
 			children = (
 				885090B6277100290038B225 /* PageViewController */,
 				885090802770C32C0038B225 /* NavigationController.swift */,
+				88BA0B3F2771CE770093544E /* BaseView.swift */,
+				88BA0B412771D09A0093544E /* Button.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -181,7 +203,10 @@
 			isa = PBXGroup;
 			children = (
 				885090832770C71F0038B225 /* UIViewController+Extensions.swift */,
-				885090A42770E3DF0038B225 /* String+Data.swift */,
+				885090A42770E3DF0038B225 /* String+Extensions.swift */,
+				88BA0B432771D1E50093544E /* UIEdgeInsets+Extensions.swift */,
+				88BA0B472771D6430093544E /* UIDevice+Extensions.swift */,
+				88BA0B4B2771DE030093544E /* UIBarButtonItem+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -200,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				885090962770D6500038B225 /* ARViewController.swift */,
+				88BA0B4F2771FB480093544E /* ARViewModel.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -212,6 +238,7 @@
 				885090992770DF400038B225 /* OnboardingCoordinator.swift */,
 				885090A62770E5AD0038B225 /* OnboardingViewModel.swift */,
 				885090AA2770E75E0038B225 /* OnboardingViewController.swift */,
+				88BA0B3D2771CE600093544E /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -220,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				8850909C2770E0120038B225 /* Onboarding */,
+				88BA0B492771DA750093544E /* Services.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,6 +266,7 @@
 			children = (
 				885090A22770E3A60038B225 /* KeychainItem.swift */,
 				885090A82770E61B0038B225 /* Bindable.swift */,
+				88BA0B452771D40B0093544E /* Haptic.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -247,6 +276,7 @@
 			children = (
 				885090AD2770F9E60038B225 /* OnboardingPageViewModel.swift */,
 				885090AF2770FAE90038B225 /* OnboardingPageViewController.swift */,
+				88BA0B4D2771E8BA0093544E /* OnboardingPageView.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -367,6 +397,8 @@
 				885090B52770FE0D0038B225 /* OnboardingConsentViewModel.swift in Sources */,
 				885090B02770FAE90038B225 /* OnboardingPageViewController.swift in Sources */,
 				880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */,
+				88BA0B422771D09A0093544E /* Button.swift in Sources */,
+				88BA0B3E2771CE600093544E /* OnboardingView.swift in Sources */,
 				885090922770CF4E0038B225 /* HomeView.swift in Sources */,
 				885090812770C32C0038B225 /* NavigationController.swift in Sources */,
 				885090972770D6500038B225 /* ARViewController.swift in Sources */,
@@ -374,7 +406,9 @@
 				885090A92770E61B0038B225 /* Bindable.swift in Sources */,
 				885090A02770E1B30038B225 /* OnboardingManager.swift in Sources */,
 				880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */,
+				88BA0B502771FB490093544E /* ARViewModel.swift in Sources */,
 				885090882770C9770038B225 /* LaunchState.swift in Sources */,
+				88BA0B482771D6430093544E /* UIDevice+Extensions.swift in Sources */,
 				885090842770C71F0038B225 /* UIViewController+Extensions.swift in Sources */,
 				88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */,
 				885090AE2770F9E60038B225 /* OnboardingPageViewModel.swift in Sources */,
@@ -382,16 +416,22 @@
 				88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */,
 				885090A32770E3A60038B225 /* KeychainItem.swift in Sources */,
 				885090B32770FDB40038B225 /* OnboardingConsentViewController.swift in Sources */,
-				885090A52770E3DF0038B225 /* String+Data.swift in Sources */,
+				885090A52770E3DF0038B225 /* String+Extensions.swift in Sources */,
+				88BA0B402771CE770093544E /* BaseView.swift in Sources */,
 				880FC0352770966500491371 /* LaunchViewController.swift in Sources */,
 				8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */,
+				88BA0B4C2771DE030093544E /* UIBarButtonItem+Extensions.swift in Sources */,
+				88BA0B4A2771DA750093544E /* Services.swift in Sources */,
 				8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */,
 				885090B82771003C0038B225 /* PageViewController.swift in Sources */,
 				885090902770CE350038B225 /* HomeViewController.swift in Sources */,
+				88BA0B442771D1E50093544E /* UIEdgeInsets+Extensions.swift in Sources */,
 				885090AB2770E75E0038B225 /* OnboardingViewController.swift in Sources */,
 				885090942770D52B0038B225 /* HomeViewModel.swift in Sources */,
 				885090A72770E5AD0038B225 /* OnboardingViewModel.swift in Sources */,
+				88BA0B4E2771E8BA0093544E /* OnboardingPageView.swift in Sources */,
 				880FC03E2770972800491371 /* Coordinator.swift in Sources */,
+				88BA0B462771D40B0093544E /* Haptic.swift in Sources */,
 				8850909A2770DF400038B225 /* OnboardingCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
