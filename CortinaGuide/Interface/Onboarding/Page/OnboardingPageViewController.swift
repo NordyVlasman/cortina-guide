@@ -29,12 +29,6 @@ class OnboardingPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubSwiftUIView(PageView(), to: view)
-    }
-}
-
-struct PageView: View {
-    var body: some View {
-            Text("hekl")
+        addSubSwiftUIView(OnboardingPageView(viewModel: viewModel), to: view)
     }
 }
