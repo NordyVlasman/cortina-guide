@@ -7,22 +7,54 @@
 
 import Foundation
 import UIKit
-import SwiftUI
+import ARKit
 
-class ARViewController: UIViewController {
+class ARViewController: UIViewController, ARSCNViewDelegate {
+    
+    private let viewModel: ARViewModel
+    let sceneView = ARSCNView()
+    
+    // MARK: - Innits
+    init(viewModel: ARViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "AR"
+        view.addSubview(sceneView)
         
-        addSubSwiftUIView(ARView(), to: view)
+        setupView()
     }
     
     
-}
-
-struct ARView: View {
-    var body: some View {
-        Text("AR")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        
+        sceneView.session.run(configuration, options: [])
+    }
+    
+    // MARK: - Private
+    private func setupView() {
+        setupSceneView()
+    }
+    
+    private func setupSceneView() {
+        sceneView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            sceneView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            sceneView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            sceneView.topAnchor.constraint(equalTo: view.topAnchor),
+            sceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
