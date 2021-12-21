@@ -17,14 +17,18 @@ protocol BaseCoordinatorDelegate: AnyObject {
 
 class BaseCoordinator: SharedCoordinator {
     
+    var onboardingFactory: OnboardingFactoryProtocol = OnboardingFactory()
+    
     override func start() {
-        setupView()
-        navigateToHome()
+        handleOnboarding(factory: onboardingFactory) {
+            setupView()
+            navigateToHome()
+        }
     }
     
     fileprivate func setupView() {
         dashboardNavigationController = NavigationController()
-        window.rootViewController = dashboardNavigationController
+        self.window.rootViewController = self.dashboardNavigationController
     }
 }
 

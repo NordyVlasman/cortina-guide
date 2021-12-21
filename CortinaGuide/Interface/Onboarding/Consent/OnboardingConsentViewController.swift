@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
+
+protocol ConsentViewDelegate: AnyObject {
+    func didFinish()
+}
 
 final class OnboardingConsentViewController: UIViewController {
     
@@ -22,6 +27,25 @@ final class OnboardingConsentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSubSwiftUIView(ConsentView(delegate: self), to: view)
     }
+}
+
+extension OnboardingConsentViewController: ConsentViewDelegate {
+    func didFinish() {
+        viewModel.coordinator?.consentGiven()
+    }
+}
+
+struct ConsentView: View {
+    weak var delegate: ConsentViewDelegate?
     
+    var body: some View {
+        Text("Consent")
+        Button(action: {
+            delegate?.didFinish()
+        }, label: {
+            Text("Yo")
+        })
+    }
 }

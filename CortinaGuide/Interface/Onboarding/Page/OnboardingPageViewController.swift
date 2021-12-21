@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
+
+protocol OnboardingPageViewControllerDelegate: AnyObject {
+    
+}
 
 class OnboardingPageViewController: UIViewController {
     
     private let viewModel: OnboardingPageViewModel
+    
+    weak var delegate: OnboardingPageViewControllerDelegate?
     
     init(viewModel: OnboardingPageViewModel) {
         self.viewModel = viewModel
@@ -22,5 +29,12 @@ class OnboardingPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSubSwiftUIView(PageView(), to: view)
+    }
+}
+
+struct PageView: View {
+    var body: some View {
+            Text("hekl")
     }
 }
