@@ -44,6 +44,7 @@
 		88BA0B4A2771DA750093544E /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B492771DA750093544E /* Services.swift */; };
 		88BA0B4C2771DE030093544E /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B4B2771DE030093544E /* UIBarButtonItem+Extensions.swift */; };
 		88BA0B4E2771E8BA0093544E /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B4D2771E8BA0093544E /* OnboardingPageView.swift */; };
+		88BA0B502771FB490093544E /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B4F2771FB480093544E /* ARViewModel.swift */; };
 		88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB6E276B732300AA7511 /* AppDelegate.swift */; };
 		88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB70276B732300AA7511 /* SceneDelegate.swift */; };
 		88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E0BB77276B732700AA7511 /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		88BA0B492771DA750093544E /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		88BA0B4B2771DE030093544E /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		88BA0B4D2771E8BA0093544E /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		88BA0B4F2771FB480093544E /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		88E0BB6B276B732300AA7511 /* CortinaGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CortinaGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E0BB6E276B732300AA7511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E0BB70276B732300AA7511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				885090962770D6500038B225 /* ARViewController.swift */,
+				88BA0B4F2771FB480093544E /* ARViewModel.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				885090A92770E61B0038B225 /* Bindable.swift in Sources */,
 				885090A02770E1B30038B225 /* OnboardingManager.swift in Sources */,
 				880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */,
+				88BA0B502771FB490093544E /* ARViewModel.swift in Sources */,
 				885090882770C9770038B225 /* LaunchState.swift in Sources */,
 				88BA0B482771D6430093544E /* UIDevice+Extensions.swift in Sources */,
 				885090842770C71F0038B225 /* UIViewController+Extensions.swift in Sources */,

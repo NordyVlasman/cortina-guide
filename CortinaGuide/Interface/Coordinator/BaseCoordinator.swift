@@ -36,6 +36,9 @@ class BaseCoordinator: SharedCoordinator {
 // MARKL - BaseCoordinatorDelegate
 extension BaseCoordinator: BaseCoordinatorDelegate {
     func navigateToHome() {
+        if window.rootViewController != self.dashboardNavigationController {
+            self.window.rootViewController = self.dashboardNavigationController
+        }
         if let existingStartViewController = dashboardNavigationController?.viewControllers.first(where: { $0 is HomeViewController }) {
             dashboardNavigationController?.popToViewController(existingStartViewController, animated: true)
         } else {
@@ -46,8 +49,11 @@ extension BaseCoordinator: BaseCoordinatorDelegate {
     }
     
     func navigateToAugmentedReality() {
-        let viewController = ARViewController()
-        self.window.rootViewController = viewController
-//        dashboardNavigationController?.pushViewController(viewController, animated: false)
+        if self.window.rootViewController is ARViewController {
+            return
+        } else {
+            let viewController = ARViewController(viewModel: ARViewModel(coordinator: self))
+            self.window.rootViewController = viewController
+        }
     }
 }
