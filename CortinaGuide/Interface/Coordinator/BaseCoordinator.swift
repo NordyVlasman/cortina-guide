@@ -47,6 +47,7 @@ extension BaseCoordinator: BaseCoordinatorDelegate {
     
     func navigateToAugmentedReality() {
         let viewController = ARViewController()
-        dashboardNavigationController?.pushViewController(viewController, animated: false)
+        self.window.rootViewController = viewController
+//        dashboardNavigationController?.pushViewController(viewController, animated: false)
     }
 }

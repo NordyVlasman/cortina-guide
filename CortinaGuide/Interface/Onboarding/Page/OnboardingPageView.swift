@@ -27,3 +27,4 @@ struct OnboardingPageView_Previews: PreviewProvider {
         OnboardingPageView()
     }
 }
+ 
