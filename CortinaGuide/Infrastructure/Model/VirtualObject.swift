@@ -209,7 +209,7 @@ class VirtualObject: SCNNode {
         self.addChildNode(headNode)
     }
     
-    private func load() {
+    func load() {
         switch loadingType {
         case .refferenceNode(let sCNReferenceNode):
             sCNReferenceNode.load()
