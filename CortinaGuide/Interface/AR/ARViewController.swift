@@ -39,6 +39,8 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
+        configuration.isLightEstimationEnabled = true
+        configuration.isAutoFocusEnabled = true
         
         sceneView.session.run(configuration, options: [])
     }
