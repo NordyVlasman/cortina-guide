@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547892092774C81A002F431F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547892082774C81A002F431F /* SwiftUIView.swift */; };
 		880FC0312770965500491371 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0302770965500491371 /* LaunchView.swift */; };
 		880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0322770965C00491371 /* LaunchViewModel.swift */; };
 		880FC0352770966500491371 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0342770966500491371 /* LaunchViewController.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		547892082774C81A002F431F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		880FC0302770965500491371 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		880FC0322770965C00491371 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		880FC0342770966500491371 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				8850908F2770CE350038B225 /* HomeViewController.swift */,
 				885090912770CF4E0038B225 /* HomeView.swift */,
+				547892082774C81A002F431F /* SwiftUIView.swift */,
 				885090932770D52B0038B225 /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -428,6 +431,7 @@
 				88BA0B442771D1E50093544E /* UIEdgeInsets+Extensions.swift in Sources */,
 				885090AB2770E75E0038B225 /* OnboardingViewController.swift in Sources */,
 				885090942770D52B0038B225 /* HomeViewModel.swift in Sources */,
+				547892092774C81A002F431F /* SwiftUIView.swift in Sources */,
 				885090A72770E5AD0038B225 /* OnboardingViewModel.swift in Sources */,
 				88BA0B4E2771E8BA0093544E /* OnboardingPageView.swift in Sources */,
 				880FC03E2770972800491371 /* Coordinator.swift in Sources */,
