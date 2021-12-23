@@ -18,4 +18,8 @@ extension float4x4 {
             columns.3 = [newValue.x, newValue.y, newValue.z, columns.3.w]
         }
     }
+    
+    var orientation: simd_quatf {
+        return simd_quaternion(self)
+    }
 }

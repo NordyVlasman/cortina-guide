@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
-import ARKit
+import RealityKit
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
-    
+class ARViewController: UIViewController {
+
     private let viewModel: ARViewModel
-    let sceneView = ARSCNView()
+    
+    
+    var arView: ARCortinaView = ARCortinaView(frame: .zero, settings: Settings())
     
     // MARK: - Innits
     init(viewModel: ARViewModel) {
@@ -24,39 +26,28 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        super.loadView()
+        view = arView
+    }
+    
     // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addSubview(sceneView)
-        
-        setupView()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
-        configuration.isLightEstimationEnabled = true
-        configuration.isAutoFocusEnabled = true
-        
-        sceneView.session.run(configuration, options: [])
+        setupView()
     }
     
     // MARK: - Private
     private func setupView() {
-        setupSceneView()
+        setupARView()
     }
     
-    private func setupSceneView() {
-        sceneView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            sceneView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            sceneView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            sceneView.topAnchor.constraint(equalTo: view.topAnchor),
-            sceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+    private func setupARView() {
+        arView.setup()
     }
 }
+
