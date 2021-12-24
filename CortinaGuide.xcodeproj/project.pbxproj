@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		547892092774C81A002F431F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547892082774C81A002F431F /* SwiftUIView.swift */; };
+		5478920B2775E148002F431F /* HomeViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478920A2775E148002F431F /* HomeViewCollection.swift */; };
 		880FC0312770965500491371 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0302770965500491371 /* LaunchView.swift */; };
 		880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0322770965C00491371 /* LaunchViewModel.swift */; };
 		880FC0352770966500491371 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0342770966500491371 /* LaunchViewController.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		547892082774C81A002F431F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		5478920A2775E148002F431F /* HomeViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCollection.swift; sourceTree = "<group>"; };
 		880FC0302770965500491371 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		880FC0322770965C00491371 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		880FC0342770966500491371 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				8850908F2770CE350038B225 /* HomeViewController.swift */,
 				885090912770CF4E0038B225 /* HomeView.swift */,
+				5478920A2775E148002F431F /* HomeViewCollection.swift */,
 				547892082774C81A002F431F /* SwiftUIView.swift */,
 				885090932770D52B0038B225 /* HomeViewModel.swift */,
 			);
@@ -425,6 +428,7 @@
 				8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */,
 				88BA0B4C2771DE030093544E /* UIBarButtonItem+Extensions.swift in Sources */,
 				88BA0B4A2771DA750093544E /* Services.swift in Sources */,
+				5478920B2775E148002F431F /* HomeViewCollection.swift in Sources */,
 				8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */,
 				885090B82771003C0038B225 /* PageViewController.swift in Sources */,
 				885090902770CE350038B225 /* HomeViewController.swift in Sources */,

@@ -18,12 +18,18 @@ struct OnboardingPageView: View {
     }
     
     var body: some View {
-        ZStack {
+//        ZStack {
 //            Color.purple
 //                .ignoresSafeArea()
             VStack {
                 
-                Spacer ()
+                Spacer()
+                Rectangle ()
+                    .fill(Color.black)
+                    .frame(width:300, height: 300)
+
+                Spacer()
+                
                 Text ("Fiets in AR")
                     .font(.title)
                     .fontWeight(.black)
@@ -70,7 +76,7 @@ struct OnboardingPageView: View {
                 Spacer ()
                 
             }
-    }
+//    }
 }
 
 struct OnboardingPageView_Previews: PreviewProvider {

@@ -25,39 +25,46 @@ struct HomeView: View {
                     .padding(.trailing, 100)
                 
                 Spacer ()
-                HStack {
                     Button(action: {
                         delegate?.navigateToAR()
                     }, label: {
-                        Text("Stadsfiets")
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color.black)
+                        
                     })
-                        .frame (width: 150, height:60)
-                        .background (Color.white)
-                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
-                      
-                    
-                    Button(action: {
-                        delegate?.navigateToAR()
-                    }, label: {
-                        Text("E bikes")
-                            .fontWeight(.heavy)
-                            .foregroundColor(Color.black)
-                    })
-                        .frame (width: 150, height:60)
-                        .background (Color.white)
-                        .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
-
+                HStack{
+                    Knop (text: "Stadsfietsen")
+                    Knop (text: "E bikes")
                 }
+                HStack{
+                    Knop (text: "Family bikes")
+                    Knop (text: "Damesfietsen")
+                }
+                HStack{
+                    Knop (text: "Transportfietsen")
+                    Knop (text: "Herenfietsen")
+                }
+                HStack{
+                    Knop (text: "Kids fietsen")
+                    Knop (text: "Sportieve fietsen")
+                }
+                HStack{
+                    Knop (text: "Direct leverbaar")
                     
+                    Rectangle ()
+                        .fill(Color.white)
+                        .frame(width: 200, height: 100)
+                       
+                }
+               
+                    Spacer ()
                 
-                Spacer ()
-                
-            }
+
+                        
+        }
+
     }
-//            .background(.purple)
+       
 }
+
 
 
 
