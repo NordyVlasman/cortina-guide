@@ -53,7 +53,7 @@ class OnboardingViewController: UIViewController {
             }
         }
         
-        sceneView.primaryButton.setTitle("Next", for: .normal)
+        sceneView.primaryButton.setTitle("Beginnen", for: .normal)
         sceneView.primaryButton.touchUpInside(self, action: #selector(primaryButtonTapped))
         
 //        setupBackButton()
@@ -102,6 +102,8 @@ class OnboardingViewController: UIViewController {
 
 extension OnboardingViewController: PageViewControllerDelegate {
     func pageViewController(_ pageViewController: PageViewController, didSwipeToPendingViewControllerAt index: Int) {
+        sceneView.pageControl.currentPage = index
+        sceneView.primaryButton.setTitle(viewModel.pages[index].buttonText, for: .normal)
         navigationItem.leftBarButtonItem = index > 0 ? backButton: nil
     }
 }

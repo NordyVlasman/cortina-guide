@@ -18,7 +18,7 @@ class CortinaButton: UIButton {
         func backgroundColor(isEnabled: Bool = true) -> UIColor {
             switch self {
             case .roundedBlue:
-                return isEnabled ? .blue : .gray
+                return isEnabled ? .systemBlue : .gray
             case .roundedWhite, .roundedBlueBorder:
                 return isEnabled ? .white : .gray
             case .textLabelBlue:
@@ -121,7 +121,7 @@ class CortinaButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.cornerRadius = style.isRounded ? min(bounds.width, bounds.height) / 2 : 0
+        layer.cornerRadius = style.isRounded ? min(bounds.width, bounds.height) / 4 : 0
         titleLabel?.preferredMaxLayoutWidth = titleLabel?.frame.size.width ?? 0
     }
     

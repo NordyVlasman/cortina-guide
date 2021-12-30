@@ -18,6 +18,14 @@ class OnboardingView: BaseView {
         // Margins
         static let margin: CGFloat = 20.0
         static let pageControlMargin: CGFloat = 12.0
+        
+        enum Spacing {
+            static let button: CGFloat = 48
+        }
+        
+        enum Margin {
+            static let edge: CGFloat = 20
+        }
     }
     
     let containerView: UIView = {
@@ -32,7 +40,7 @@ class OnboardingView: BaseView {
         let view = UIPageControl()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.pageIndicatorTintColor = .gray
-        view.currentPageIndicatorTintColor = .blue
+        view.currentPageIndicatorTintColor = .systemBlue
         return view
     }()
     
@@ -40,7 +48,6 @@ class OnboardingView: BaseView {
     
     override func setupViews() {
         super.setupViews()
-        
         backgroundColor = .white
     }
     
@@ -56,15 +63,33 @@ class OnboardingView: BaseView {
         super.setupViewConstraints()
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: topAnchor, constant: UIDevice.current.hasNotch ? 0 : -15.0),
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerView.topAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.topAnchor
+            ),
+            containerView.leadingAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.leadingAnchor
+            ),
+            containerView.trailingAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.trailingAnchor
+            ),
             
+            primaryButton.centerXAnchor.constraint(
+                equalTo: centerXAnchor
+            ),
+            primaryButton.topAnchor.constraint(
+                equalTo: containerView.bottomAnchor,
+                constant: ViewTraits.Spacing.button
+            ),
             primaryButton.heightAnchor.constraint(greaterThanOrEqualToConstant: ViewTraits.buttonHeight),
-            primaryButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            primaryButton.leadingAnchor.constraint(greaterThanOrEqualTo: safeAreaLayoutGuide.leadingAnchor, constant: ViewTraits.margin),
-            primaryButton.trailingAnchor.constraint(lessThanOrEqualTo: safeAreaLayoutGuide.trailingAnchor, constant: -ViewTraits.margin),
-            primaryButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -ViewTraits.margin)
+            primaryButton.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 10),
+            primaryButton.trailingAnchor.constraint(
+                lessThanOrEqualTo: safeAreaLayoutGuide.trailingAnchor,
+                constant: -ViewTraits.Margin.edge
+            ),
+            primaryButton.bottomAnchor.constraint(
+                equalTo: safeAreaLayoutGuide.bottomAnchor,
+                constant: -ViewTraits.Margin.edge
+            )
         ])
     }
     

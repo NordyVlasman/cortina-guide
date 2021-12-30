@@ -16,8 +16,19 @@ struct OnboardingPageView: View {
     
     var body: some View {
         VStack {
-            Text(viewModel?.title ?? "Test title")
-            Text(viewModel?.message ?? "Test message")
+            HStack {
+                VStack {
+                    Text(viewModel?.title ?? "Welkom")
+                        .font(.largeTitle)
+                        .bold()
+                        .multilineTextAlignment(.center)
+                    Text(viewModel?.message ?? "Test message")
+                        .font(.headline)
+                        .fontWeight(.light)
+                        .multilineTextAlignment(.center)
+                        .padding(.top)
+                }
+            }.padding(30)
         }
     }
 }
