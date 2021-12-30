@@ -42,7 +42,6 @@ class OnboardingCoordinator: Coordinator {
     func start() {
         let viewModel = OnboardingViewModel(coordinator: self, pages: onboardingPages)
         let viewController = OnboardingViewController(viewModel: viewModel)
-        
         navigationController.pushViewController(viewController, animated: true)
     }
 }
