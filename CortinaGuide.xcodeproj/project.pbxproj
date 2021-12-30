@@ -44,9 +44,6 @@
 		88685E08277361B1009006E5 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E07277361B1009006E5 /* Collection+Extensions.swift */; };
 		88685E0B27736464009006E5 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0A27736464009006E5 /* VirtualObjectLoader.swift */; };
 		88685E0D27736678009006E5 /* FocusNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0C27736678009006E5 /* FocusNode.swift */; };
-		888D3374277381BA00C540BC /* GestureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D3373277381BA00C540BC /* GestureManager.swift */; };
-		888D33762773825900C540BC /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D33752773825900C540BC /* ThresholdPanGesture.swift */; };
-		888D33782773828400C540BC /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888D33772773828400C540BC /* CGPoint+Extensions.swift */; };
 		88BA0B3E2771CE600093544E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B3D2771CE600093544E /* OnboardingView.swift */; };
 		88BA0B402771CE770093544E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B3F2771CE770093544E /* BaseView.swift */; };
 		88BA0B422771D09A0093544E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B412771D09A0093544E /* Button.swift */; };
@@ -100,9 +97,6 @@
 		88685E07277361B1009006E5 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		88685E0A27736464009006E5 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
 		88685E0C27736678009006E5 /* FocusNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusNode.swift; sourceTree = "<group>"; };
-		888D3373277381BA00C540BC /* GestureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureManager.swift; sourceTree = "<group>"; };
-		888D33752773825900C540BC /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
-		888D33772773828400C540BC /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		88BA0B3D2771CE600093544E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		88BA0B3F2771CE770093544E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		88BA0B412771D09A0093544E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -237,7 +231,6 @@
 				88685E0327735D58009006E5 /* CAMediaTimingFunction+Extensions.swift */,
 				88685E0527735F3C009006E5 /* float4*4+extensions.swift */,
 				88685E07277361B1009006E5 /* Collection+Extensions.swift */,
-				888D33772773828400C540BC /* CGPoint+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,7 +294,6 @@
 				885090A82770E61B0038B225 /* Bindable.swift */,
 				88BA0B452771D40B0093544E /* Haptic.swift */,
 				88685E0127735D35009006E5 /* ScenekitAnimator.swift */,
-				888D33752773825900C540BC /* ThresholdPanGesture.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -337,7 +329,6 @@
 			isa = PBXGroup;
 			children = (
 				88685E0A27736464009006E5 /* VirtualObjectLoader.swift */,
-				888D3373277381BA00C540BC /* GestureManager.swift */,
 			);
 			path = "Augmented Reality";
 			sourceTree = "<group>";
@@ -442,7 +433,6 @@
 				885090B52770FE0D0038B225 /* OnboardingConsentViewModel.swift in Sources */,
 				885090B02770FAE90038B225 /* OnboardingPageViewController.swift in Sources */,
 				88685E0227735D35009006E5 /* ScenekitAnimator.swift in Sources */,
-				888D3374277381BA00C540BC /* GestureManager.swift in Sources */,
 				880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */,
 				88BA0B422771D09A0093544E /* Button.swift in Sources */,
 				88BA0B3E2771CE600093544E /* OnboardingView.swift in Sources */,
