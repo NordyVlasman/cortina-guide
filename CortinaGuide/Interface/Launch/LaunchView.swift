@@ -9,8 +9,9 @@ import SwiftUI
 
 struct LaunchView: View {
     var body: some View {
-        VStack {
-            Text("Hello world launch")
-        }
+        Image("Cover")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all)
     }
 }

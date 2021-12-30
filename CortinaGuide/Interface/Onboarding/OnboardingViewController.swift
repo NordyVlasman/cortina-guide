@@ -35,7 +35,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         setupPageController()
-        
+                
         viewModel.$pages.binding = { [weak self] in
             guard let self = self else {
                 return
@@ -56,7 +56,8 @@ class OnboardingViewController: UIViewController {
         sceneView.primaryButton.setTitle("Next", for: .normal)
         sceneView.primaryButton.touchUpInside(self, action: #selector(primaryButtonTapped))
         
-        setupBackButton()
+//        setupBackButton()
+        navigationItem.hidesBackButton = true
     }
     
     private func setupBackButton() {
