@@ -12,6 +12,8 @@
 		880FC0352770966500491371 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0342770966500491371 /* LaunchViewController.swift */; };
 		880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC03A277096EB00491371 /* AppCoordinator.swift */; };
 		880FC03E2770972800491371 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC03D2770972800491371 /* Coordinator.swift */; };
+		8812CF4F2774A451004ABBE1 /* ARCortinaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812CF4E2774A451004ABBE1 /* ARCortinaView.swift */; };
+		88471A1B277601AB0013FA52 /* export.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 88471A1A277601AA0013FA52 /* export.usdc */; };
 		885090812770C32C0038B225 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090802770C32C0038B225 /* NavigationController.swift */; };
 		885090842770C71F0038B225 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090832770C71F0038B225 /* UIViewController+Extensions.swift */; };
 		885090862770C8B10038B225 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885090852770C8B10038B225 /* Launch Screen.storyboard */; };
@@ -35,6 +37,13 @@
 		885090B32770FDB40038B225 /* OnboardingConsentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090B22770FDB40038B225 /* OnboardingConsentViewController.swift */; };
 		885090B52770FE0D0038B225 /* OnboardingConsentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090B42770FE0D0038B225 /* OnboardingConsentViewModel.swift */; };
 		885090B82771003C0038B225 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885090B72771003C0038B225 /* PageViewController.swift */; };
+		88685E0027732866009006E5 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685DFF27732865009006E5 /* VirtualObject.swift */; };
+		88685E0227735D35009006E5 /* ScenekitAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0127735D35009006E5 /* ScenekitAnimator.swift */; };
+		88685E0427735D58009006E5 /* CAMediaTimingFunction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0327735D58009006E5 /* CAMediaTimingFunction+Extensions.swift */; };
+		88685E0627735F3C009006E5 /* float4*4+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0527735F3C009006E5 /* float4*4+extensions.swift */; };
+		88685E08277361B1009006E5 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E07277361B1009006E5 /* Collection+Extensions.swift */; };
+		88685E0B27736464009006E5 /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0A27736464009006E5 /* VirtualObjectLoader.swift */; };
+		88685E0D27736678009006E5 /* FocusNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88685E0C27736678009006E5 /* FocusNode.swift */; };
 		88BA0B3E2771CE600093544E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B3D2771CE600093544E /* OnboardingView.swift */; };
 		88BA0B402771CE770093544E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B3F2771CE770093544E /* BaseView.swift */; };
 		88BA0B422771D09A0093544E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA0B412771D09A0093544E /* Button.swift */; };
@@ -56,6 +65,8 @@
 		880FC0342770966500491371 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		880FC03A277096EB00491371 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		880FC03D2770972800491371 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8812CF4E2774A451004ABBE1 /* ARCortinaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCortinaView.swift; sourceTree = "<group>"; };
+		88471A1A277601AA0013FA52 /* export.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = export.usdc; sourceTree = "<group>"; };
 		885090802770C32C0038B225 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		885090832770C71F0038B225 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		885090852770C8B10038B225 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -79,6 +90,13 @@
 		885090B22770FDB40038B225 /* OnboardingConsentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConsentViewController.swift; sourceTree = "<group>"; };
 		885090B42770FE0D0038B225 /* OnboardingConsentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingConsentViewModel.swift; sourceTree = "<group>"; };
 		885090B72771003C0038B225 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		88685DFF27732865009006E5 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		88685E0127735D35009006E5 /* ScenekitAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScenekitAnimator.swift; sourceTree = "<group>"; };
+		88685E0327735D58009006E5 /* CAMediaTimingFunction+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAMediaTimingFunction+Extensions.swift"; sourceTree = "<group>"; };
+		88685E0527735F3C009006E5 /* float4*4+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "float4*4+extensions.swift"; sourceTree = "<group>"; };
+		88685E07277361B1009006E5 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		88685E0A27736464009006E5 /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		88685E0C27736678009006E5 /* FocusNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusNode.swift; sourceTree = "<group>"; };
 		88BA0B3D2771CE600093544E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		88BA0B3F2771CE770093544E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		88BA0B412771D09A0093544E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -154,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				88E0BB77276B732700AA7511 /* Assets.xcassets */,
+				88471A1A277601AA0013FA52 /* export.usdc */,
 				885090852770C8B10038B225 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
@@ -184,6 +203,8 @@
 			children = (
 				880FC03D2770972800491371 /* Coordinator.swift */,
 				885090872770C9770038B225 /* LaunchState.swift */,
+				88685DFF27732865009006E5 /* VirtualObject.swift */,
+				88685E0C27736678009006E5 /* FocusNode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +228,9 @@
 				88BA0B432771D1E50093544E /* UIEdgeInsets+Extensions.swift */,
 				88BA0B472771D6430093544E /* UIDevice+Extensions.swift */,
 				88BA0B4B2771DE030093544E /* UIBarButtonItem+Extensions.swift */,
+				88685E0327735D58009006E5 /* CAMediaTimingFunction+Extensions.swift */,
+				88685E0527735F3C009006E5 /* float4*4+extensions.swift */,
+				88685E07277361B1009006E5 /* Collection+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +250,7 @@
 			children = (
 				885090962770D6500038B225 /* ARViewController.swift */,
 				88BA0B4F2771FB480093544E /* ARViewModel.swift */,
+				8812CF4E2774A451004ABBE1 /* ARCortinaView.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -246,6 +271,7 @@
 		8850909B2770E00D0038B225 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				88685E0927736457009006E5 /* Augmented Reality */,
 				8850909C2770E0120038B225 /* Onboarding */,
 				88BA0B492771DA750093544E /* Services.swift */,
 			);
@@ -267,6 +293,7 @@
 				885090A22770E3A60038B225 /* KeychainItem.swift */,
 				885090A82770E61B0038B225 /* Bindable.swift */,
 				88BA0B452771D40B0093544E /* Haptic.swift */,
+				88685E0127735D35009006E5 /* ScenekitAnimator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -296,6 +323,14 @@
 				885090B72771003C0038B225 /* PageViewController.swift */,
 			);
 			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		88685E0927736457009006E5 /* Augmented Reality */ = {
+			isa = PBXGroup;
+			children = (
+				88685E0A27736464009006E5 /* VirtualObjectLoader.swift */,
+			);
+			path = "Augmented Reality";
 			sourceTree = "<group>";
 		};
 		88E0BB62276B732300AA7511 = {
@@ -383,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				885090862770C8B10038B225 /* Launch Screen.storyboard in Resources */,
+				88471A1B277601AB0013FA52 /* export.usdc in Resources */,
 				88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,26 +432,34 @@
 			files = (
 				885090B52770FE0D0038B225 /* OnboardingConsentViewModel.swift in Sources */,
 				885090B02770FAE90038B225 /* OnboardingPageViewController.swift in Sources */,
+				88685E0227735D35009006E5 /* ScenekitAnimator.swift in Sources */,
 				880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */,
 				88BA0B422771D09A0093544E /* Button.swift in Sources */,
 				88BA0B3E2771CE600093544E /* OnboardingView.swift in Sources */,
+				88685E0D27736678009006E5 /* FocusNode.swift in Sources */,
 				885090922770CF4E0038B225 /* HomeView.swift in Sources */,
 				885090812770C32C0038B225 /* NavigationController.swift in Sources */,
 				885090972770D6500038B225 /* ARViewController.swift in Sources */,
 				880FC0312770965500491371 /* LaunchView.swift in Sources */,
+				88685E0027732866009006E5 /* VirtualObject.swift in Sources */,
 				885090A92770E61B0038B225 /* Bindable.swift in Sources */,
+				8812CF4F2774A451004ABBE1 /* ARCortinaView.swift in Sources */,
 				885090A02770E1B30038B225 /* OnboardingManager.swift in Sources */,
 				880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */,
 				88BA0B502771FB490093544E /* ARViewModel.swift in Sources */,
 				885090882770C9770038B225 /* LaunchState.swift in Sources */,
 				88BA0B482771D6430093544E /* UIDevice+Extensions.swift in Sources */,
+				88685E0B27736464009006E5 /* VirtualObjectLoader.swift in Sources */,
 				885090842770C71F0038B225 /* UIViewController+Extensions.swift in Sources */,
+				888D33782773828400C540BC /* CGPoint+Extensions.swift in Sources */,
 				88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */,
 				885090AE2770F9E60038B225 /* OnboardingPageViewModel.swift in Sources */,
 				8850909E2770E0200038B225 /* OnboardingFactory.swift in Sources */,
 				88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */,
+				88685E0627735F3C009006E5 /* float4*4+extensions.swift in Sources */,
 				885090A32770E3A60038B225 /* KeychainItem.swift in Sources */,
 				885090B32770FDB40038B225 /* OnboardingConsentViewController.swift in Sources */,
+				88685E08277361B1009006E5 /* Collection+Extensions.swift in Sources */,
 				885090A52770E3DF0038B225 /* String+Extensions.swift in Sources */,
 				88BA0B402771CE770093544E /* BaseView.swift in Sources */,
 				880FC0352770966500491371 /* LaunchViewController.swift in Sources */,
@@ -426,6 +470,7 @@
 				885090B82771003C0038B225 /* PageViewController.swift in Sources */,
 				885090902770CE350038B225 /* HomeViewController.swift in Sources */,
 				88BA0B442771D1E50093544E /* UIEdgeInsets+Extensions.swift in Sources */,
+				88685E0427735D58009006E5 /* CAMediaTimingFunction+Extensions.swift in Sources */,
 				885090AB2770E75E0038B225 /* OnboardingViewController.swift in Sources */,
 				885090942770D52B0038B225 /* HomeViewModel.swift in Sources */,
 				885090A72770E5AD0038B225 /* OnboardingViewModel.swift in Sources */,
@@ -433,6 +478,7 @@
 				880FC03E2770972800491371 /* Coordinator.swift in Sources */,
 				88BA0B462771D40B0093544E /* Haptic.swift in Sources */,
 				8850909A2770DF400038B225 /* OnboardingCoordinator.swift in Sources */,
+				888D33762773825900C540BC /* ThresholdPanGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +621,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.cortina.CortinaGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = io.cortina.guide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -603,7 +649,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.cortina.CortinaGuide;
+				PRODUCT_BUNDLE_IDENTIFIER = io.cortina.guide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
