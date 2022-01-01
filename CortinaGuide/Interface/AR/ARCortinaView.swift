@@ -37,9 +37,15 @@ class ARCortinaView: ARView, ARSessionDelegate {
         scene.addAnchor(bikeAnchor)
         return bikeAnchor
     }()
+    
+    let cortinaRenderOptions: ARView.RenderOptions = [
+        .disableMotionBlur,
+        .disableCameraGrain
+    ]
         
     func setup() {
         let arConfig = ARWorldTrackingConfiguration()
+        arView.renderOptions = cortinaRenderOptions
         arView.session.run(arConfig)
         asyncLoadModelEntity()
     }
@@ -59,12 +65,9 @@ class ARCortinaView: ARView, ARSessionDelegate {
                 entity.generateCollisionShapes(recursive: true)
     
                 self.bikeAnchor.addChild(entity)
-            
-                
                 
                 self.scene.addAnchor(self.bikeAnchor)
                 self.arView.installGestures(for: entity)
-                
             })
     }
 }
