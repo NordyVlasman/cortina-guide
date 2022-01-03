@@ -2,62 +2,55 @@
 //  CollisionSizeComponent.swift
 //  CortinaGuide
 //
-//  Created by Nordy Vlasman on 01/01/2022.
+//  Created by Nordy Vlasman on 03/01/2022.
 //
 
-import Foundation
 import RealityKit
 
 enum CollisionSizeShape: Codable {
     case capsule(totalHeight: Float, radius: Float, mass: Float)
     case sphere(radius: Float, mass: Float)
-    
+
     var totalHeight: Float {
         switch self {
         case .capsule(let totalHeight, _, _): return totalHeight
         case .sphere(let radius, _): return radius
         }
     }
-    
+
     var cylinderHeight: Float {
         switch self {
-        case .capsule(let totalHeight, let radius, _):
-            return totalHeight - (2.0 * radius)
-        case .sphere(let radius, _):
-            return radius
+        case .capsule(let totalHeight, let radius, _): return totalHeight - (2.0 * radius)
+        case .sphere(let radius, _): return radius
         }
     }
-    
+
     var radius: Float {
         switch self {
-        case .capsule(_, let radius, _):
-            return radius
-        case .sphere(let radius, _):
-            return radius
+        case .capsule(_, let radius, _): return radius
+        case .sphere(let radius, _): return radius
         }
     }
-    
+
     var mass: Float {
         switch self {
-        case .capsule(_, _, let mass):
-            return mass
-        case .sphere(_, let mass):
-            return mass
+        case .capsule(_, _, let mass): return mass
+        case .sphere(_, let mass): return mass
         }
     }
-    
+
     enum CaseIdentifier: Int, Codable {
         case capsule
         case sphere
     }
-    
+
     enum CodingKeys: Int, CodingKey {
         case shape
         case totalHeight
         case radius
         case mass
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let caseIdentifier = try container.decode(CaseIdentifier.self, forKey: .shape)
@@ -73,7 +66,7 @@ enum CollisionSizeShape: Codable {
             self = .sphere(radius: radius, mass: mass)
         }
     }
-    
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
@@ -100,14 +93,9 @@ protocol HasCollisionSize where Self: Entity {}
 
 extension HasCollisionSize {
     var collisionSize: CollisionSizeComponent {
-        get {
-            return components[CollisionSizeComponent.self] ?? CollisionSizeComponent()
-        }
-        set {
-            components[CollisionSizeComponent.self] = newValue
-        }
+        get { return components[CollisionSizeComponent.self] ?? CollisionSizeComponent() }
+        set { components[CollisionSizeComponent.self] = newValue }
     }
-    
     var totalHeight: Float { return collisionSize.shape.totalHeight }
     var cylinderHeight: Float { return collisionSize.shape.totalHeight - (2.0 * collisionSize.shape.radius) }
     var radius: Float { return collisionSize.shape.radius }
