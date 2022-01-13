@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 import RealityKit
 
+
 class ARViewController: UIViewController {
 
     private let viewModel: ARViewModel
-    
     
     var arView: ARCortinaView = ARCortinaView(frame: .zero, settings: Settings())
     
@@ -49,5 +49,6 @@ class ARViewController: UIViewController {
     private func setupARView() {
         arView.setup()
     }
+    
 }
 
