@@ -126,13 +126,13 @@ class ARCortinaView: ARView, ARSessionDelegate, HasCollisionGroups, ARCoachingOv
         guard let groundPlane = cortinaScene.findEntity(named: "Ground Plane") else { return }
         
         setNewCollisionFilter(thisEntity: groundPlane, belongsToGroup: .ground, andCanCollideWith: [.bike, .bigRubberBall, .ground])
-        setNewCollisionFilter(thisEntity: cortinaScene.bike!, belongsToGroup: .bike, andCanCollideWith: [.bike, .bigRubberBall, .ground])
+        setNewCollisionFilter(thisEntity: cortinaScene.bike1!, belongsToGroup: .bike, andCanCollideWith: [.bike, .bigRubberBall, .ground])
         setNewCollisionFilter(thisEntity: cortinaScene.bigRubberBall!, belongsToGroup: .bigRubberBall, andCanCollideWith: [.ground, .bike])
         addCollisionListenings(onEntity: cortinaScene.bigRubberBall as! Entity & HasCollision)
         
         if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                let sceneEntities = [self.cortinaScene.bike!, self.cortinaScene.bigRubberBall!]
+                let sceneEntities = [self.cortinaScene.bike1!, self.cortinaScene.bigRubberBall!]
                 sceneEntities.forEach { entity in
                     self.addCollisionWithLiDARMesh(on: entity)
                 }

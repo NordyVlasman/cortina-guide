@@ -56,6 +56,8 @@
 		88E0BB6F276B732300AA7511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB6E276B732300AA7511 /* AppDelegate.swift */; };
 		88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0BB70276B732300AA7511 /* SceneDelegate.swift */; };
 		88E0BB78276B732700AA7511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88E0BB77276B732700AA7511 /* Assets.xcassets */; };
+		88FA83AD2791830B00742E0E /* ExperienceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA83AC2791830B00742E0E /* ExperienceController.swift */; };
+		88FA83AF2791840700742E0E /* ExperienceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA83AE2791840700742E0E /* ExperienceSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		88E0BB70276B732300AA7511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		88E0BB77276B732700AA7511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88E0BB7C276B732700AA7511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FA83AC2791830B00742E0E /* ExperienceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceController.swift; sourceTree = "<group>"; };
+		88FA83AE2791840700742E0E /* ExperienceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				882765E327901CA6008D9097 /* CollisionFilters.swift */,
+				88FA83AC2791830B00742E0E /* ExperienceController.swift */,
+				88FA83AE2791840700742E0E /* ExperienceSettings.swift */,
 			);
 			path = "Augmented Reality";
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				880FC0312770965500491371 /* LaunchView.swift in Sources */,
 				885090A92770E61B0038B225 /* Bindable.swift in Sources */,
 				8812CF4F2774A451004ABBE1 /* ARCortinaView.swift in Sources */,
+				88FA83AF2791840700742E0E /* ExperienceSettings.swift in Sources */,
 				885090A02770E1B30038B225 /* OnboardingManager.swift in Sources */,
 				880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */,
 				88BA0B502771FB490093544E /* ARViewModel.swift in Sources */,
@@ -459,6 +466,7 @@
 				880FC0352770966500491371 /* LaunchViewController.swift in Sources */,
 				8850908D2770CBE90038B225 /* SharedCoordinator.swift in Sources */,
 				88BA0B4C2771DE030093544E /* UIBarButtonItem+Extensions.swift in Sources */,
+				88FA83AD2791830B00742E0E /* ExperienceController.swift in Sources */,
 				88BA0B4A2771DA750093544E /* Services.swift in Sources */,
 				88B2C66B27834D500055F75A /* Constants.swift in Sources */,
 				8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */,
