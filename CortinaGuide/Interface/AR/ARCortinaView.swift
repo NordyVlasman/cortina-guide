@@ -14,9 +14,17 @@ class Settings {
 //
 }
 
-class ARCortinaView: ARView, ARSessionDelegate {
+enum CollisionGroups: String, CaseIterable {
+    case bike, bigRubberBall, ground
+}
+
+class ARCortinaView: ARView, ARSessionDelegate, HasCollisionGroups, ARCoachingOverlayViewDelegate {
+    typealias CollisionGroupsEnum = CollisionGroups
     
-    private var cancellable: AnyCancellable?
+    var cortinaScene: Cortina.Scene!
+    var cameraAnchor = AnchorEntity(.camera)
+    
+    private var collisionSubscriptions = [Cancellable]()
     
     init(frame: CGRect, settings: Settings) {
         super.init(frame: frame)
@@ -31,12 +39,7 @@ class ARCortinaView: ARView, ARSessionDelegate {
     }
     
     var arView: ARView { return self }
-   
-    lazy var bikeAnchor: AnchorEntity = {
-        let bikeAnchor = AnchorEntity()
-        scene.addAnchor(bikeAnchor)
-        return bikeAnchor
-    }()
+    var arCoachingOverlayView: ARCoachingOverlayView?
     
     let cortinaRenderOptions: ARView.RenderOptions = [
         .disableMotionBlur,
@@ -44,30 +47,96 @@ class ARCortinaView: ARView, ARSessionDelegate {
     ]
         
     func setup() {
-        let arConfig = ARWorldTrackingConfiguration()
+        arCoachingOverlayView = ARCoachingOverlayView(frame: frame)
         arView.renderOptions = cortinaRenderOptions
-        arView.session.run(arConfig)
-        asyncLoadModelEntity()
+        loadScene()
+        
+        scene.addAnchor(cameraAnchor)
+        
+        prepareView()
+        
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
+            setupLidar()
+        } else {
+            setupDefault()
+        }
     }
     
-    func asyncLoadModelEntity() {
-        let filename = "export.usdc"
-        
-        self.cancellable = ModelEntity.loadModelAsync(named: filename)
-            .sink(receiveCompletion: { loadCompletion in
-                switch loadCompletion {
-                case .failure(let error): print("Unable to load modelEntity for \(filename). Error: \(error.localizedDescription)")
-                case .finished:
-                    break
-                }
-            }, receiveValue: { modelEntity in
-                let entity = modelEntity.clone(recursive: true)
-                entity.generateCollisionShapes(recursive: true)
+    // MARK: - Publics
+    func addCollisionListenings(onEntity entity: Entity & HasCollision) {
+        collisionSubscriptions.append(self.scene.subscribe(to: CollisionEvents.Began.self, on: entity) { event in
+            print(event.entityA.name, "collided with", event.entityB.name)
+        })
+    }
     
-                self.bikeAnchor.addChild(entity)
-                
-                self.scene.addAnchor(self.bikeAnchor)
-                self.arView.installGestures(for: entity)
-            })
+    // MARK: - Privates
+    private func prepareView() {
+        guard let arCoachingOverlayView = arCoachingOverlayView else {
+            return
+        }
+        arView.addSubview(arCoachingOverlayView)
+
+        NSLayoutConstraint.activate([
+            arCoachingOverlayView.topAnchor.constraint(
+                equalTo: arView.topAnchor
+            ),
+            arCoachingOverlayView.leadingAnchor.constraint(
+                equalTo: arView.leadingAnchor
+            ),
+            arCoachingOverlayView.trailingAnchor.constraint(
+                equalTo: arView.trailingAnchor
+            ),
+        ])
+        
+        arCoachingOverlayView.goal = .horizontalPlane
+        
+    }
+    
+    private func loadScene() {
+        Cortina.loadSceneAsync(completion: {[weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error.localizedDescription)
+            case .success(let scene):
+                self?.cortinaScene = scene
+                self?.scene.addAnchor(scene)
+                self?.sceneDidLoad()
+            }
+        })
+    }
+    
+    private func setupLidar() {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        configuration.sceneReconstruction = .mesh
+        session.run(configuration)
+        arCoachingOverlayView?.session = session
+        environment.sceneUnderstanding.options.insert(.physics)
+    }
+    
+    private func setupDefault() {
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.planeDetection = .horizontal
+        session.run(configuration)
+        arCoachingOverlayView?.session = session
+        environment.sceneUnderstanding.options.insert(.physics)
+    }
+    
+    private func sceneDidLoad() {
+        guard let groundPlane = cortinaScene.findEntity(named: "Ground Plane") else { return }
+        
+        setNewCollisionFilter(thisEntity: groundPlane, belongsToGroup: .ground, andCanCollideWith: [.bike, .bigRubberBall, .ground])
+        setNewCollisionFilter(thisEntity: cortinaScene.bike1!, belongsToGroup: .bike, andCanCollideWith: [.bike, .bigRubberBall, .ground])
+        setNewCollisionFilter(thisEntity: cortinaScene.bigRubberBall!, belongsToGroup: .bigRubberBall, andCanCollideWith: [.ground, .bike])
+        addCollisionListenings(onEntity: cortinaScene.bigRubberBall as! Entity & HasCollision)
+        
+        if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                let sceneEntities = [self.cortinaScene.bike1!, self.cortinaScene.bigRubberBall!]
+                sceneEntities.forEach { entity in
+                    self.addCollisionWithLiDARMesh(on: entity)
+                }
+            }
+        }
     }
 }
