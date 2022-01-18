@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		547892092774C81A002F431F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547892082774C81A002F431F /* SwiftUIView.swift */; };
 		5478920B2775E148002F431F /* HomeViewCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478920A2775E148002F431F /* HomeViewCollection.swift */; };
+		5478920D2775F6B6002F431F /* SwiftUIViewFilterKnop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5478920C2775F6B6002F431F /* SwiftUIViewFilterKnop.swift */; };
+		54839F812797041400D023D7 /* SwiftUIViewBikeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5484B6E02784EF2C008622BB /* SwiftUIViewBikeInfo.swift */; };
+		54C1295A279716B0007E2524 /* HomeViewCollectionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C12959279716B0007E2524 /* HomeViewCollectionFilter.swift */; };
 		880FC0312770965500491371 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0302770965500491371 /* LaunchView.swift */; };
 		880FC0332770965C00491371 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0322770965C00491371 /* LaunchViewModel.swift */; };
 		880FC0352770966500491371 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880FC0342770966500491371 /* LaunchViewController.swift */; };
@@ -55,6 +58,9 @@
 /* Begin PBXFileReference section */
 		547892082774C81A002F431F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5478920A2775E148002F431F /* HomeViewCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCollection.swift; sourceTree = "<group>"; };
+		5478920C2775F6B6002F431F /* SwiftUIViewFilterKnop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewFilterKnop.swift; sourceTree = "<group>"; };
+		5484B6E02784EF2C008622BB /* SwiftUIViewBikeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewBikeInfo.swift; sourceTree = "<group>"; };
+		54C12959279716B0007E2524 /* HomeViewCollectionFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCollectionFilter.swift; sourceTree = "<group>"; };
 		880FC0302770965500491371 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		880FC0322770965C00491371 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		880FC0342770966500491371 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +227,9 @@
 				8850908F2770CE350038B225 /* HomeViewController.swift */,
 				885090912770CF4E0038B225 /* HomeView.swift */,
 				5478920A2775E148002F431F /* HomeViewCollection.swift */,
+				54C12959279716B0007E2524 /* HomeViewCollectionFilter.swift */,
+				5478920C2775F6B6002F431F /* SwiftUIViewFilterKnop.swift */,
+				5484B6E02784EF2C008622BB /* SwiftUIViewBikeInfo.swift */,
 				547892082774C81A002F431F /* SwiftUIView.swift */,
 				885090932770D52B0038B225 /* HomeViewModel.swift */,
 			);
@@ -400,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5478920D2775F6B6002F431F /* SwiftUIViewFilterKnop.swift in Sources */,
 				885090B52770FE0D0038B225 /* OnboardingConsentViewModel.swift in Sources */,
 				885090B02770FAE90038B225 /* OnboardingPageViewController.swift in Sources */,
 				880FC03B277096EB00491371 /* AppCoordinator.swift in Sources */,
@@ -422,6 +432,7 @@
 				88E0BB71276B732300AA7511 /* SceneDelegate.swift in Sources */,
 				885090A32770E3A60038B225 /* KeychainItem.swift in Sources */,
 				885090B32770FDB40038B225 /* OnboardingConsentViewController.swift in Sources */,
+				54C1295A279716B0007E2524 /* HomeViewCollectionFilter.swift in Sources */,
 				885090A52770E3DF0038B225 /* String+Extensions.swift in Sources */,
 				88BA0B402771CE770093544E /* BaseView.swift in Sources */,
 				880FC0352770966500491371 /* LaunchViewController.swift in Sources */,
@@ -430,6 +441,7 @@
 				88BA0B4A2771DA750093544E /* Services.swift in Sources */,
 				5478920B2775E148002F431F /* HomeViewCollection.swift in Sources */,
 				8850908B2770CBE10038B225 /* BaseCoordinator.swift in Sources */,
+				54839F812797041400D023D7 /* SwiftUIViewBikeInfo.swift in Sources */,
 				885090B82771003C0038B225 /* PageViewController.swift in Sources */,
 				885090902770CE350038B225 /* HomeViewController.swift in Sources */,
 				88BA0B442771D1E50093544E /* UIEdgeInsets+Extensions.swift in Sources */,
